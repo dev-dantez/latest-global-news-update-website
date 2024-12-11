@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Update Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Latest News Updates</h1>
+        <p>Stay updated with the latest news from various sources.</p>
+        
+        <!-- Category Dropdown -->
+        <label for="category-select">Choose a category:</label>
+        <select id="category-select" onchange="fetchNews()">
+            <option value="" selected>All Categories</option>
+            <option value="general">General</option>
+            <option value="sports">Sports</option>
+            <option value="politics">Politics</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="business">Business</option>
+            <option value="technology">Technology</option>
+        </select>        
+        
+        <!-- Search Input and Buttons -->
+        <input type="text" id="search-input" placeholder="Search for news..." />
+        <button id="search-button" onclick="searchNews()">Search</button>
+        <button id="clear-button" onclick="clearSearch()">Clear Search</button>
+    </header>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="spinner hidden">
+        <!-- Spinner will be displayed while fetching data -->
+        <p>Loading...</p>
+    </div>
+
+    <!-- News Articles Container -->
+    <section id="news-container">
+        <!-- News articles will be injected here -->
+    </section>
+
+    <!-- Pagination -->
+    <div id="pagination" aria-label="Pagination Navigation">
+        <!-- Pagination buttons will be injected here -->
+    </div>
+
+    <footer>
+        <p>&copy; 2024 News Site</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
